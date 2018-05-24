@@ -26,4 +26,15 @@ export class HomeComponent implements OnInit {
     $('#exampleModal').modal();
   }
 
+  cargarMas() {
+    this.youtuveService.getVideos().subscribe(videos => {
+      this.videos.push.apply(this.videos, videos);
+    });
+  }
+
+  cerrarModal( ) {
+    this.videoSeleccionado = null;
+    $('#exampleModal').modal('hide');
+  }
+
 }
