@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 // Services
@@ -17,7 +18,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [YoutubeService],
   bootstrap: [AppComponent]
